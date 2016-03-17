@@ -36,7 +36,12 @@ class Stack<T> {
 
 	// 查询栈顶元素
 	public T peek() {
-		return (T) array.get(--size);
+		if (!isEmpty()) {
+			return (T) array.get(--size);
+		} else {
+			System.out.println("Empty Stack");
+			return null;
+		}
 	}
 
 	// 输出栈中所有元素
